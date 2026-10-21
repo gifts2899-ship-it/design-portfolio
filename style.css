@@ -1,0 +1,770 @@
+
+/* =========================
+   1. GLOBAL STYLES
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --cream: #fff7f0;
+    --black: #030303;
+    --purple: #755cde;
+    --orange: #f5a45b;
+    --pink: #f49b9f;
+    --coral: #ed7565;
+    --teal: #60c4b5;
+    --dark-purple: #552049;
+    --white: #ffffff;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--cream);
+    color: var(--black);
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* =========================
+   2. HEADER
+========================= */
+
+.header,
+.footer {
+    max-width: 1110px;
+    margin: 0 auto;
+    padding: 30px 24px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    width: 55px;
+    height: 55px;
+    background-color: var(--black);
+    border-radius: 3px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo span {
+    display: block;
+    width: 18px;
+    height: 18px;
+    border: 3px solid var(--teal);
+    border-radius: 50%;
+}
+
+.header-button {
+    display: inline-block;
+    padding: 16px 28px;
+    border-radius: 35px;
+
+    background-color: var(--black);
+    color: var(--white);
+
+    font-size: 14px;
+    font-weight: bold;
+
+    transition: background-color 0.3s ease;
+}
+
+.header-button:hover {
+    background-color: var(--purple);
+}
+
+/* =========================
+   3. HERO INTRODUCTION
+========================= */
+
+.intro {
+    text-align: center;
+    padding: 25px 20px 40px;
+}
+
+.intro h1 {
+    font-size: clamp(32px, 4vw, 52px);
+    line-height: 1.15;
+    font-weight: 700;
+    margin-bottom: 22px;
+    letter-spacing: -1.5px;
+}
+
+.intro p {
+    max-width: 580px;
+    margin: 0 auto;
+
+    color: #7a746f;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+/* =========================
+   4. SERVICES GRID
+========================= */
+
+.services {
+    max-width: 1110px;
+    margin: 0 auto;
+    padding: 0 24px;
+
+    display: grid;
+
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-rows: 180px 180px 180px;
+
+    gap: 24px;
+}
+
+.service {
+    position: relative;
+    overflow: hidden;
+
+    border-radius: 7px;
+    padding: 24px;
+
+    color: var(--white);
+    min-width: 0;
+    isolation: isolate;
+}
+
+.service h2 {
+    position: absolute;
+    left: 24px;
+    bottom: 24px;
+
+    font-size: 19px;
+    line-height: 1.2;
+    font-weight: 700;
+
+    z-index: 2;
+}
+
+.graphic {
+    background-color: var(--purple);
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.uiux {
+    background-color: var(--orange);
+}
+
+.apps {
+    background-color: var(--pink);
+}
+
+.illustrations {
+    background-color: var(--coral);
+    grid-column: span 2;
+}
+
+.photography {
+    background-color: var(--teal);
+    grid-column: span 2;
+}
+
+.motion {
+    background-color: var(--dark-purple);
+    grid-column: span 2;
+}
+
+/* =========================
+   5. DECORATIVE ARTWORK
+========================= */
+
+.art {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+
+    width: 60%;
+    height: 65%;
+
+    z-index: 1;
+}
+
+.shape {
+    position: absolute;
+    display: block;
+}
+
+/* Graphic Design artwork */
+
+.art-graphic {
+    top: 8%;
+    right: 7%;
+    width: 65%;
+    height: 70%;
+}
+
+.art-graphic .square {
+    width: 45%;
+    height: 78%;
+    background: #512047;
+    top: 0;
+    left: 18%;
+}
+
+.art-graphic .circle {
+    width: 30px;
+    height: 30px;
+    border: 4px solid white;
+    border-radius: 50%;
+    left: 25%;
+    top: 8%;
+    z-index: 2;
+}
+
+.art-graphic .ring {
+    width: 46px;
+    height: 46px;
+    border: 5px solid #f6a15c;
+    border-radius: 50%;
+    top: 17%;
+    right: 2%;
+}
+
+.art-graphic .triangle {
+    width: 0;
+    height: 0;
+    border-top: 100px solid #fff7f0;
+    border-left: 100px solid transparent;
+    right: 0;
+    top: 42%;
+}
+
+.art-graphic .dot-pattern {
+    width: 40px;
+    height: 40px;
+    left: 18%;
+    bottom: -5%;
+
+    background-image: radial-gradient(#080808 2px, transparent 2px);
+    background-size: 12px 12px;
+}
+
+/* UI/UX artwork */
+
+.art-uiux {
+    width: 70%;
+    height: 55%;
+    right: 10%;
+    top: 10%;
+}
+
+.orange-square {
+    background: #e7785f;
+    width: 35px;
+    height: 35px;
+    left: 5%;
+    top: 5%;
+}
+
+.black-ring {
+    width: 38px;
+    height: 38px;
+    border: 4px solid #090909;
+    border-radius: 50%;
+    right: 5%;
+    top: 0;
+}
+
+.tiny-dots {
+    left: 5%;
+    top: 48%;
+    width: 45px;
+    height: 45px;
+
+    background-image: radial-gradient(#080808 2px, transparent 2px);
+    background-size: 12px 12px;
+}
+
+.white-triangle {
+    right: 0;
+    top: 38%;
+
+    width: 0;
+    height: 0;
+
+    border-top: 42px solid #fff7f0;
+    border-left: 42px solid transparent;
+}
+
+/* Apps artwork */
+
+.art-apps {
+    width: 75%;
+    height: 65%;
+    top: 8%;
+}
+
+.blue-triangle {
+    right: 3%;
+    top: 0;
+
+    width: 0;
+    height: 0;
+
+    border-top: 25px solid #755cde;
+    border-left: 25px solid transparent;
+}
+
+.pink-square {
+    width: 25px;
+    height: 25px;
+    background: #e77883;
+    left: 8%;
+    top: 18%;
+}
+
+.white-ring {
+    width: 28px;
+    height: 28px;
+    border: 3px solid white;
+    border-radius: 50%;
+    left: 30%;
+    top: 20%;
+}
+
+.purple-oval {
+    width: 55px;
+    height: 25px;
+    background: #552049;
+    right: 5%;
+    top: 45%;
+    border-radius: 20px;
+}
+
+/* Illustrations artwork */
+
+.art-illustrations {
+    width: 48%;
+    height: 65%;
+    right: 7%;
+    top: 8%;
+}
+
+.mint-triangle {
+    left: 0;
+    bottom: 0;
+
+    width: 0;
+    height: 0;
+
+    border-top: 30px solid transparent;
+    border-right: 30px solid #60c4b5;
+}
+
+.coral-square {
+    width: 30px;
+    height: 30px;
+    background: #fff7f0;
+    left: 0;
+    top: 0;
+}
+
+.purple-square {
+    width: 35px;
+    height: 35px;
+    background: #755cde;
+    right: 25%;
+    top: 0;
+}
+
+.white-circle {
+    width: 27px;
+    height: 27px;
+    border: 3px solid white;
+    border-radius: 50%;
+    right: 0;
+    top: 5%;
+}
+
+.black-dots {
+    width: 75px;
+    height: 60px;
+    right: 0;
+    top: 0;
+
+    background-image: radial-gradient(#090909 2px, transparent 2px);
+    background-size: 13px 13px;
+    z-index: -1;
+}
+
+/* Photography artwork */
+
+.art-photography {
+    width: 65%;
+    height: 65%;
+    top: 12%;
+    right: 8%;
+}
+
+.photo-ring {
+    width: 32px;
+    height: 32px;
+    border: 4px solid #080808;
+    border-radius: 50%;
+    left: 5%;
+    top: 5%;
+}
+
+.photo-square {
+    width: 65px;
+    height: 65px;
+    background: #ed7565;
+    left: 27%;
+    top: 0;
+}
+
+.photo-square::after {
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border: 3px solid white;
+    border-radius: 50%;
+    left: 16px;
+    top: 16px;
+}
+
+.photo-triangle {
+    right: 0;
+    top: 0;
+
+    width: 0;
+    height: 0;
+
+    border-top: 45px solid #fff7f0;
+    border-left: 45px solid transparent;
+}
+
+.photo-dots {
+    right: 0;
+    top: 50%;
+    width: 40px;
+    height: 40px;
+
+    background-image: radial-gradient(#080808 2px, transparent 2px);
+    background-size: 12px 12px;
+}
+
+/* Motion Graphics artwork */
+
+.art-motion {
+    width: 70%;
+    height: 65%;
+    right: 8%;
+    top: 10%;
+}
+
+.motion-ring {
+    width: 28px;
+    height: 28px;
+    border: 3px solid #b27b9f;
+    border-radius: 50%;
+    top: 10%;
+}
+
+.motion-ring.one {
+    left: 15%;
+}
+
+.motion-ring.two {
+    left: 32%;
+}
+
+.motion-ring.three {
+    left: 49%;
+    border-color: #f49b9f;
+}
+
+.motion-ring.four {
+    left: 66%;
+    border-color: white;
+}
+
+.motion-oval {
+    width: 65px;
+    height: 30px;
+    background: #f5a45b;
+    left: 25%;
+    top: 43%;
+    border-radius: 50%;
+}
+
+.motion-triangle {
+    right: 0;
+    top: 38%;
+
+    width: 0;
+    height: 0;
+
+    border-top: 30px solid #f49b9f;
+    border-left: 30px solid transparent;
+}
+
+/* =========================
+   6. ABOUT AMY
+========================= */
+
+.about {
+    max-width: 1110px;
+    margin: 100px auto 80px;
+    padding: 0 24px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 70px;
+}
+
+.profile {
+    position: relative;
+    width: 100%;
+    max-width: 445px;
+    aspect-ratio: 1 / 1;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile-decoration {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: var(--teal);
+    z-index: 0;
+}
+
+.profile img {
+    position: relative;
+    z-index: 1;
+
+    width: 85%;
+    height: 95%;
+
+    object-fit: cover;
+    object-position: center top;
+
+    border-radius: 48%;
+}
+
+.about-content h2 {
+    font-size: clamp(28px, 3vw, 40px);
+    line-height: 1.2;
+    letter-spacing: -0.7px;
+
+    margin-bottom: 24px;
+}
+
+.about-content p {
+    color: #7a746f;
+    font-size: 17px;
+    line-height: 1.7;
+
+    margin-bottom: 30px;
+}
+
+.consultation {
+    display: inline-block;
+
+    background-color: var(--coral);
+    color: white;
+
+    padding: 16px 30px;
+    border-radius: 35px;
+
+    font-size: 14px;
+    font-weight: bold;
+
+    transition: background-color 0.3s ease;
+}
+
+.consultation:hover {
+    background-color: var(--black);
+}
+
+/* =========================
+   7. FOOTER
+========================= */
+
+.footer {
+    border-top: 1px solid #eee4dc;
+}
+
+/* =========================
+   8. TABLET RESPONSIVENESS
+========================= */
+
+@media (max-width: 850px) {
+
+    .services {
+        grid-template-rows: 160px 160px 160px;
+        gap: 16px;
+    }
+
+    .service {
+        padding: 18px;
+    }
+
+    .service h2 {
+        left: 18px;
+        bottom: 18px;
+        font-size: 16px;
+    }
+
+    .about {
+        gap: 35px;
+        margin-top: 80px;
+    }
+
+    .about-content h2 {
+        font-size: 30px;
+    }
+
+    .about-content p {
+        font-size: 15px;
+    }
+}
+
+/* =========================
+   9. MOBILE RESPONSIVENESS
+========================= */
+
+@media (max-width: 600px) {
+
+    .header,
+    .footer {
+        padding: 20px 24px;
+    }
+
+    .logo {
+        width: 48px;
+        height: 48px;
+    }
+
+    .header-button {
+        padding: 14px 20px;
+        font-size: 12px;
+    }
+
+    .intro {
+        padding: 28px 20px 36px;
+    }
+
+    .intro h1 {
+        font-size: 32px;
+        letter-spacing: -1px;
+        margin-bottom: 20px;
+    }
+
+    .intro p {
+        font-size: 15px;
+        line-height: 1.6;
+    }
+
+    .services {
+        padding: 0 24px;
+
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-rows: 130px 130px 130px 130px;
+
+        gap: 16px;
+    }
+
+    .service {
+        padding: 16px;
+        border-radius: 6px;
+    }
+
+    .service h2 {
+        left: 16px;
+        bottom: 16px;
+        font-size: 15px;
+    }
+
+    .graphic {
+        grid-column: span 2;
+        grid-row: span 2;
+    }
+
+    .uiux,
+    .apps {
+        grid-column: span 1;
+    }
+
+    .illustrations,
+    .photography,
+    .motion {
+        grid-column: span 2;
+    }
+
+    .art-graphic {
+        width: 65%;
+        height: 68%;
+        right: 7%;
+    }
+
+    .art-uiux,
+    .art-apps {
+        width: 70%;
+        height: 60%;
+    }
+
+    .art-illustrations,
+    .art-photography,
+    .art-motion {
+        width: 55%;
+    }
+
+    .about {
+        margin: 65px auto 60px;
+        padding: 0 24px;
+
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .profile {
+        width: 100%;
+        max-width: 320px;
+        margin: 0 auto;
+    }
+
+    .about-content {
+        text-align: center;
+    }
+
+    .about-content h2 {
+        font-size: 30px;
+        margin-bottom: 20px;
+    }
+
+    .about-content p {
+        font-size: 15px;
+        line-height: 1.7;
+    }
+
+    .footer {
+        gap: 15px;
+    }
+}
